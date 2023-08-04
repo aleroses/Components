@@ -1,0 +1,24 @@
+.header {
+  height: 15vh;
+}
+
+.header .header__menu {
+  display: none;
+}
+
+.header .header__nav {
+  width: auto;
+  height: 100%;
+  pointer-events: auto;
+  overflow: visible;
+  display: block;
+}
+
+.header .ul {
+  flex-flow: row;
+  justify-content: flex-end;
+}
+
+.header .li {
+  margin: 0 0.5rem;
+}

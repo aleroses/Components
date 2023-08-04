@@ -51,23 +51,27 @@
   border-radius: 50%;
 }
 
-
 /* --------------------------- */
 /* Order */
 /* --------------------------- */
 
 .container {
   display: flex;
+  justify-content: space-around;
+  background-color: #4f46e5;
 }
 
 .item-1 {
   order: 2;
+  background-color: #cbd5e1;
 }
 
 .item-2 {
   order: 1;
+  background-color: #cbd5e1;
 }
 
-.item-3 {
-  order: 3;
-}
+/* .item-3 {
+  order: 2;
+} */
+

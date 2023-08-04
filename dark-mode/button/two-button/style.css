@@ -14,7 +14,7 @@ body {
 .logo {
   width: 30px;
   height: 30px;
-  /* transition: <propiedades> <duración> <tiempo> <retraso>; */
+  /* transition: <propiedades> <duración> <tempo> <retraso>; */
   /* transition: all 0.3s ease; */
   transition: transform 0.3s ease;
 }

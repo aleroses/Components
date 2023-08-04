@@ -1,0 +1,229 @@
+:root {
+  --first-color: #090b10;
+  --second-color: #0f111a;
+  --third-color: #4f46e5;
+  --fourth-color: #cbd5e1;
+  --fitfh-color: #55667c;
+  --red-logo: #ea0031;
+  --x: #191725;
+  --y: #26213d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  /* 	height: 15vh; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--first-color);
+}
+
+.header .header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header .logo {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__menu {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  transition: transform 0.5s ease;
+}
+
+.header .header__menu.rotate {
+  transform: rotate(90deg);
+}
+
+.header .menu {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__nav {
+  width: 100%;
+  height: 0;
+  pointer-events: auto;
+  /* pointer-events: none; */
+  overflow: hidden;
+  transition: all 0.5s ease;
+  /* display: none; */
+}
+
+.header .header__nav.active {
+  /* display: block; */
+  height: 50vh;
+}
+
+.header .ul {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.header .li {
+  margin: 0.5rem 0;
+}
+
+.header .a {
+  text-decoration: none;
+  color: var(--fourth-color);
+}
+
+/* .header { */
+/* width: 100vw;
+  background-color: var(--first-color);
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap; */ /* Dirección y ajuste */
+/* flex-direction: row; Solo dirección */
+/* justify-content: space-between;
+  align-items: center;
+
+  color: var(--fourth-color); */
+/* } */
+/* 
+.header .header__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.header .logo {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__menu {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--first-color);
+}
+
+.header .menu {
+  width: 100%;
+  height: 100%;
+}
+
+.header .header__nav {
+}
+
+.header .ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .li {
+  margin: 0 0.5rem;
+  list-style: none;
+}
+
+.header .a {
+  text-decoration: none;
+  color: var(--fourth-color);
+}
+
+@media screen and (max-width: 480px) {
+  .header .header__menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header .header__nav {
+    width: 100%;
+    display: nonexxx;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .header__nav.activo {
+    display: blockxxx;
+    height: 50vh;
+    pointer-events: auto;
+  }
+
+  .header .ul {
+    flex-direction: column;
+  }
+
+  .header .li {
+    margin: 1rem 0;
+    list-style: none;
+  }
+
+  .header .a {
+    text-decoration: none;
+    color: var(--fourth-color);
+  }
+} */
+
+/* ------------------------------------------------------- */
+/* ----- Diferencia entre flex-flow y flex direction ----- */
+/* ------------------------------------------------------- */
+
+/* 
+En el contexto de CSS y la propiedad flexbox, "flex-direction" y "flex-flow" son dos propiedades relacionadas pero distintas:
+
+1. "flex-direction": Esta propiedad establece la dirección principal en la que se alinean los elementos flexibles dentro de un contenedor flex. Puede tomar uno de los siguientes valores:
+   - "row" (por defecto): Los elementos se alinean en una fila de izquierda a derecha.
+   - "row-reverse": Los elementos se alinean en una fila de derecha a izquierda.
+   - "column": Los elementos se alinean en una columna de arriba hacia abajo.
+   - "column-reverse": Los elementos se alinean en una columna de abajo hacia arriba.
+
+2. "flex-flow": Esta propiedad es una abreviatura de dos propiedades: "flex-direction" y "flex-wrap". Permite establecer tanto la dirección principal como el comportamiento de ajuste de línea de los elementos flexibles en un solo lugar. Puedes especificar los valores para estas dos propiedades separados por un espacio.
+   - Ejemplo: "flex-flow: row wrap;" establece la dirección principal como una fila y permite que los elementos se envuelvan en varias líneas si el contenedor no puede contenerlos en una sola fila.
+
+En resumen, "flex-direction" se utiliza para establecer la dirección principal de los elementos flexibles (fila o columna), mientras que "flex-flow" se utiliza para establecer tanto la dirección principal como el comportamiento de ajuste de línea en un solo lugar.
+
+*/
+
+/* ------------------------------------------------------- */
+/* ------------------- pointer-events  ------------------- */
+/* ------------------------------------------------------- */
+
+/* 
+La propiedad CSS "pointer-events" se utiliza para controlar cómo un elemento HTML responde a eventos de puntero, como clics o interacciones táctiles. Esta propiedad puede aplicarse a cualquier elemento y tiene varios valores posibles:
+
+1. "auto": Es el valor predeterminado. El elemento responde normalmente a los eventos de puntero.
+
+2. "none": El elemento no responde a los eventos de puntero. Los eventos pasan a través del elemento como si no estuviera presente. Esto permite que los eventos se dirijan a los elementos subyacentes.
+
+3. "visiblePainted": El elemento responde a los eventos de puntero si la parte visible del elemento está sobre un píxel distinto de transparente. Si el elemento tiene una parte transparente, no responderá a los eventos.
+
+4. "visibleFill": El elemento responde a los eventos de puntero si la parte visible del elemento está sobre un píxel distinto de transparente o de un valor de relleno que no sea "none". Si el elemento tiene una parte transparente o sin relleno, no responderá a los eventos.
+
+5. "visibleStroke": El elemento responde a los eventos de puntero si la parte visible del elemento está sobre un píxel distinto de transparente o de un valor de trazo que no sea "none". Si el elemento tiene una parte transparente o sin trazo, no responderá a los eventos.
+
+6. "visible": El elemento responde a los eventos de puntero si la parte visible del elemento está sobre un píxel distinto de transparente, un valor de relleno que no sea "none" o un valor de trazo que no sea "none". Si el elemento tiene una parte transparente, sin relleno o sin trazo, no responderá a los eventos.
+
+La propiedad "pointer-events" es útil cuando se desea controlar la interacción con los elementos de una página web. Por ejemplo, se puede utilizar para deshabilitar temporalmente la interacción con ciertos elementos, permitir que los elementos subyacentes reciban eventos de puntero o crear áreas sensibles al puntero dentro de un elemento más grande.
+
+Es importante tener en cuenta que el soporte de navegadores puede variar para esta propiedad, especialmente en versiones antiguas de algunos navegadores, por lo que se debe verificar la compatibilidad antes de utilizarla en un proyecto.
+
+*/
