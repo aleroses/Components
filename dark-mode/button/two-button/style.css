@@ -1,0 +1,147 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 100%;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  /* transition: <propiedades> <duración> <tiempo> <retraso>; */
+  /* transition: all 0.3s ease; */
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .logo {
+  transform: rotate(40deg);
+}
+
+
+/* -------------------------------------------------------------- */
+/* ------------------------ Explicaciones ---------------------- */
+/* -------------------------------------------------------------- */
+
+/* transition */
+/* 
+La propiedad CSS transition se utiliza para controlar la transición entre los diferentes estados de un elemento cuando se producen cambios en sus propiedades.
+
+La sintaxis básica de transition es la siguiente:
+
+🔥 transition: <propiedades> <duración> <tempo> <retraso>;
+
+<propiedades>: Especifica las propiedades CSS que deseas animar durante la transición. Puedes incluir una o varias propiedades separadas por comas (por ejemplo: transition: width, color;). También puedes usar el valor all para aplicar la transición a todas las propiedades que cambien.
+
+<duración>: Indica la duración de la transición. Puedes especificarla en segundos (s) o milisegundos (ms). Por ejemplo, 0.5s para medio segundo o 200ms para 200 milisegundos.
+
+<tempo> (opcional): Define la función de aceleración (timing function) que se utilizará para la transición. Puedes usar valores como ease (predeterminado), linear, ease-in, ease-out, ease-in-out, y más. Estas funciones controlan cómo se acelerará o desacelerará la transición a medida que avanza en el tiempo.
+
+	> La función de aceleración ease es una de las opciones predefinidas disponibles para la propiedad transition-timing-function. Esta función proporciona una transición suave y gradual, comenzando lentamente, acelerando en el medio y luego desacelerando hacia el final de la animación.
+
+<retraso> (opcional): Permite especificar un tiempo de retraso antes de que comience la transición. De nuevo, se puede utilizar s para segundos o ms para milisegundos.
+
+📌Importante: Cuando se aplica una transición a un elemento, se animarán las propiedades especificadas cuando cambien. Por ejemplo, si tienes una transición en la propiedad width, cuando el ancho del elemento cambie, se animará de manera suave y controlada durante la duración especificada.
+
+.elemento {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  transition: 👉width👈 0.5s ease;
+}
+
+Aplicará una transición al hacer click en el elemento
+.elemento:hover {
+  width: 300px;🔥👈👀
+}
+
+Esto quiere decir que transition por si solo no hace nada, necesitas especificar la propiedad a cambiar dentro del transition y fuera de este
+*/
+
+/* -------------------------------------------- */
+/* transition: all 0.3s ease; VS transition: transform 0.3s ease;*/
+/* -------------------------------------------- */
+
+/* 
+transition: transform 0.5s ease;: Con esta declaración, se está especificando que solo la propiedad transform se animará durante la transición. Esto significa que cualquier cambio en la propiedad transform, como rotaciones, escalados o traslaciones, se realizará suavemente durante 0.5 segundos con una función de aceleración suave.
+
+transition: all 0.5s ease;: En este caso, se está aplicando la transición a todas las propiedades CSS que cambien en el elemento. La palabra clave all indica que todas las propiedades serán animadas. Por lo tanto, cualquier cambio en cualquier propiedad CSS, incluyendo transform, width, height, color, entre otras, se animará durante 0.3 segundos con una función de aceleración suave.
+*/
+
+
+/* ------------------------------------------------- */
+/* propiedad transform*/
+/* ------------------------------------------------- */
+
+/* 
+La propiedad `transform` en CSS se utiliza para aplicar transformaciones visuales a elementos HTML. Permite modificar el aspecto y la posición de un elemento sin afectar el diseño normal del flujo del documento.
+
+La propiedad `transform` puede aceptar varios valores, y cada valor realiza una transformación específica. Aquí tienes algunos de los valores más comunes:
+
+1. `translate()`: Se utiliza para mover un elemento en el plano horizontal y vertical. Puedes especificar las distancias en píxeles (`px`), porcentajes (`%`) o unidades relativas (`em`, `rem`).
+
+Ejemplo: `transform: translate(100px, 50px);` mueve el elemento 100 píxeles hacia la derecha y 50 píxeles hacia abajo.
+
+2. `rotate()`: Permite rotar un elemento alrededor de su punto de referencia. El ángulo de rotación se especifica en grados (`deg`).
+
+Ejemplo: `transform: rotate(45deg);` rota el elemento 45 grados en sentido horario.
+
+3. `scale()`: Se utiliza para cambiar el tamaño de un elemento en el plano horizontal y vertical. Puedes especificar factores de escala, donde `1` es el tamaño original, valores mayores a `1` amplían el elemento y valores menores a `1` lo reducen.
+
+Ejemplo: `transform: scale(1.5);` aumenta el tamaño del elemento al 150% de su tamaño original.
+
+4. `skew()`: Permite inclinar un elemento en el plano horizontal y vertical. Los ángulos de inclinación se especifican en grados (`deg`).
+
+Ejemplo: `transform: skew(20deg, 10deg);` inclina el elemento 20 grados hacia la derecha y 10 grados hacia abajo.
+
+5. `matrix()`: Proporciona una transformación más compleja utilizando una matriz de 2D. La matriz de transformación se representa con 6 valores numéricos.
+
+Ejemplo: `transform: matrix(1, 0.5, -0.5, 1, 0, 0);` aplica una transformación de matriz personalizada al elemento.
+
+Estos son solo algunos ejemplos de cómo se pueden utilizar los valores de la propiedad `transform`. Además, puedes combinar múltiples transformaciones separándolas por espacios.
+
+Por ejemplo: `transform: rotate(45deg) translate(100px, 50px) scale(1.2);` rota el elemento 45 grados, lo mueve 100 píxeles hacia la derecha y 50 píxeles hacia abajo, y lo escala al 120% de su tamaño original.
+
+Es importante tener en cuenta que la propiedad `transform` no afecta el modelo de caja del elemento, por lo que no altera el espacio ocupado por el elemento ni afecta a otros elementos en la página. Además, las transformaciones se aplican en el orden en que se especifican.
+*/
+
+/* -------------------------------------------------- */
+/* propiedad `filter` */
+/* -------------------------------------------------- */
+/* 
+La propiedad `filter` en CSS se utiliza para aplicar efectos de filtrado visuales a elementos HTML. Permite ajustar el color, el contraste, la saturación y otros atributos de una imagen, un fondo o cualquier contenido visual.
+
+La propiedad `filter` acepta diferentes funciones de filtro, donde cada función realiza un tipo específico de manipulación visual. Aquí tienes algunos ejemplos de funciones de filtro comunes:
+
+1. `blur()`: Aplica un desenfoque a un elemento visual. Puedes especificar la cantidad de desenfoque en píxeles (`px`) o en una unidad de desenfoque relativa (`%`).
+
+Ejemplo: `filter: blur(5px);` aplica un desenfoque de 5 píxeles al elemento.
+
+2. `brightness()`: Ajusta el brillo de un elemento visual. Puedes especificar un valor numérico, donde `1` es el brillo original, valores mayores a `1` aumentan el brillo y valores menores a `1` lo reducen.
+
+Ejemplo: `filter: brightness(1.2);` aumenta el brillo del elemento en un 20%.
+
+3. `contrast()`: Ajusta el contraste de un elemento visual. Puedes especificar un valor numérico, donde `1` es el contraste original, valores mayores a `1` aumentan el contraste y valores menores a `1` lo reducen.
+
+Ejemplo: `filter: contrast(1.5);` aumenta el contraste del elemento en un 50%.
+
+4. `grayscale()`: Convierte un elemento visual a escala de grises. Puedes especificar un valor numérico entre `0` y `1`, donde `0` representa la escala de grises completa y `1` representa el elemento original sin cambios.
+
+Ejemplo: `filter: grayscale(0.8);` convierte el elemento en una imagen con un 80% de escala de grises.
+
+5. `saturate()`: Ajusta la saturación de un elemento visual. Puedes especificar un valor numérico, donde `1` es la saturación original, valores mayores a `1` aumentan la saturación y valores menores a `1` la reducen.
+
+Ejemplo: `filter: saturate(1.5);` aumenta la saturación del elemento en un 50%.
+
+Estos son solo algunos ejemplos de cómo se pueden utilizar las funciones de filtro en la propiedad `filter`. Además, puedes combinar múltiples funciones de filtro separándolas por espacios.
+
+Por ejemplo: `filter: blur(5px) brightness(1.2) saturate(1.5);` aplica un desenfoque de 5 píxeles, aumenta el brillo en un 20% y la saturación en un 50%.
+
+Es importante tener en cuenta que la propiedad `filter` afecta únicamente la apariencia visual del elemento y no tiene impacto en su comportamiento o en el modelo de caja.
+
+*/

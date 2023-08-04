@@ -1,0 +1,18 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+button {
+  cursor: pointer;
+}

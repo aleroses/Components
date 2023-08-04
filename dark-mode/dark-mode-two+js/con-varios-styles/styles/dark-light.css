@@ -1,0 +1,9 @@
+body {
+  background-color: var(--fourth-color);
+}
+
+.item03,
+.item05 {
+  background-color: var(--fourth-color);
+}
+

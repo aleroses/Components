@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- El atributo disabled se utiliza en la hoja de estilos del tema oscuro para desactivarla por defecto y evitar que se cargue al cargar la página. Luego, se activa o desactiva esta hoja de estilos según el tema seleccionado por el usuario mediante JavaScript. -->
+    <link rel="stylesheet" href="./styles/dark-light.css" disabled />
+  </head>
+  <body data-theme="dark">
+    <!-- body data-theme="dark" -->
+    <!-- 
+      data-theme="dark" / data-theme="light"
+      El atributo data-theme es un atributo personalizado que se puede agregar a cualquier elemento HTML para indicar el tema o estilo visual que se debe aplicar a ese elemento. Por sí solo no tiene ningún efecto en el estilo de la página, es necesario utilizar CSS o JavaScript.
+    -->
+    <div class="item01">
+      <div>colors</div>
+      <button class="light">Modo light</button>
+    </div>
+    <div class="item02">
+      <div>colors 02</div>
+      <div>text</div>
+    </div>
+    <div class="item03">
+      <div>colors 03</div>
+      <div>text</div>
+    </div>
+    <div class="item04">
+      <div>colors 04</div>
+      <div>text</div>
+    </div>
+    <div class="item05">
+      <div>colors 05</div>
+      <div>text</div>
+    </div>
+
+    <script src="./main.js">
+      /* const btn = document.querySelector(".light");
+      // const body = document.getElementsByTagName("body")[0];
+      const body = document.body;
+      const light = document.querySelector(
+        'link[href="./styles/dark-light.css"]'
+      );
+
+      btn.addEventListener("click", function () {
+        if (body.getAttribute("data-theme") === "dark") {
+          body.setAttribute("data-theme", "light");
+          light.disabled = false;
+        } else {
+          body.setAttribute("data-theme", "dark");
+          light.disabled = true;
+        }
+      }); */
+    </script>
+  </body>
+</html>
