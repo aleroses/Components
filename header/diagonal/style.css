@@ -1,0 +1,90 @@
+.padre {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.primero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  clip-path: polygon(64% 0, 100% 1%, 100% 100%, 43% 99%);
+}
+
+.segundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  clip-path: polygon(0 0, 64% 0, 43% 99%, 0 100%);
+}
+
+/* 
+`clip-path: polygon` como la etiqueta `<polygon>` en SVG son herramientas que permiten crear formas geométricas complejas que se pueden aplicar a elementos HTML o a elementos gráficos en SVG para recortarlos o definir su límite.
+
+La propiedad `clip-path` en CSS se utiliza para recortar el contenido de un elemento HTML, de tal manera que solo se muestre una parte específica. El valor `polygon` se utiliza para definir un polígono con un número variable de lados y con coordenadas que se especifican dentro de la propiedad. Por ejemplo, en el siguiente código CSS se utiliza `clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);` para crear un polígono que recorta un elemento HTML en forma de flecha:
+
+```
+.elemento-recortado {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+}
+```
+
+Por otro lado, en SVG, la etiqueta `<polygon>` se utiliza para dibujar un polígono con un número variable de lados y con coordenadas que se especifican dentro de la etiqueta. Por ejemplo, en el siguiente código SVG se utiliza `<polygon points="0,0 100,0 100,50 50,100 0,50" />` para dibujar un polígono en forma de flecha:
+
+```
+<svg width="200" height="200">
+  <polygon points="0,0 100,0 100,50 50,100 0,50" />
+</svg>
+```
+
+En resumen, tanto `clip-path: polygon` en CSS como `<polygon>` en SVG se utilizan para crear polígonos con un número variable de lados y con coordenadas específicas para crear formas geométricas complejas. La diferencia está en que `clip-path` recorta el contenido de un elemento HTML, mientras que `<polygon>` dibuja un elemento gráfico en SVG.
+
+*/
+
+/* 
+¡Claro! Ambas herramientas, `clip-path: polygon` en CSS y `<polygon>` en SVG, funcionan de manera similar y utilizan coordenadas para definir los puntos que forman la figura geométrica.
+
+En CSS, `clip-path: polygon` toma una lista de coordenadas separadas por espacios que representan los puntos que forman el polígono. La sintaxis es la siguiente:
+```
+clip-path: polygon(x1 y1, x2 y2, x3 y3, ...);
+```
+Cada par de valores `xi yi` representa la coordenada `x` e `y` de un punto en el polígono. Por ejemplo, `clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);` define un polígono con cinco puntos, como se muestra en la siguiente imagen:
+
+![Polígono definido por clip-path en CSS](https://i.imgur.com/5J8T1kS.png)
+
+En este ejemplo, los cinco puntos se definen de la siguiente manera:
+- `(0 0)` es el punto de inicio en la esquina superior izquierda.
+- `(100% 0)` es el punto en la esquina superior derecha.
+- `(100% 50%)` es el punto en el medio del lado derecho.
+- `(50% 100%)` es el punto en la esquina inferior del triángulo.
+- `(0 50%)` es el punto en el medio del lado izquierdo.
+
+En SVG, `<polygon>` toma una lista de coordenadas separadas por comas que representan los puntos que forman el polígono. La sintaxis es la siguiente:
+```
+<polygon points="x1,y1 x2,y2 x3,y3 ..." />
+```
+Cada par de valores `xi,yi` representa la coordenada `x` e `y` de un punto en el polígono. Por ejemplo, `<polygon points="0,0 100,0 100,50 50,100 0,50" />` define un polígono con cinco puntos, como se muestra en la siguiente imagen:
+
+![Polígono definido por la etiqueta <polygon> en SVG](https://i.imgur.com/3W8Lr2w.png)
+
+En este ejemplo, los cinco puntos se definen de la siguiente manera:
+- `(0,0)` es el punto de inicio en la esquina superior izquierda.
+- `(100,0)` es el punto en la esquina superior derecha.
+- `(100,50)` es el punto en el medio del lado derecho.
+- `(50,100)` es el punto en la esquina inferior del triángulo.
+- `(0,50)` es el punto en el medio del lado izquierdo.
+
+En resumen, tanto `clip-path: polygon` en CSS como `<polygon>` en SVG utilizan coordenadas para definir los puntos que forman la figura geométrica. Cada par de valores `xi yi` o `xi,yi` representa la coordenada `x` e `y` de un punto en el polígono.
+
+*/
