@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer two</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 600px)" />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="(min-width: 750px)"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__logo item-1">
+        <a href="#">
+          <img src="./svg/logo.svg" alt="" />
+        </a>
+      </section>
+
+      <nav class="header__nav item-2">
+        <!-- show -->
+        <ul class="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <section class="burger item-3" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </section>
+      </nav>
+
+      <!-- <section class="mode item-4">
+        <figure class="dark-mode" onclick="toggleLight()">
+          <button></button>
+        </figure>
+      </section> -->
+    </header>
+    <script src="./main.js"></script>
+    <script>
+      /* Burger Menu */
+      function toggleMenu() {
+        let menu = document.querySelector(".menu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

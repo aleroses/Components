@@ -1,29 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .padre {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  border: 1px solid black;
-  overflow: hidden;
+  /* position: relative; */
+  width: 80vw;
+  height: 10rem;
+  display: flex;
+  margin: 0 auto;
+  background-color: #887fdb;
+  color: white;
 }
 
 .primero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  background-color: red;
-  clip-path: polygon(64% 0, 100% 1%, 100% 100%, 43% 99%);
+  background-color: #887fdb;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
+.primero ul {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li {
+  margin: 0 .5rem;
+  list-style: none;
+}
+
+/* .primero p {
+} */
+
 .segundo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 40%;
+  height: 100%;
+  /* sigue la forma de las agujas del reloj  (x y)*/
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.segundo img {
   width: 100%;
   height: 100%;
-  background-color: blue;
-  clip-path: polygon(0 0, 64% 0, 43% 99%, 0 100%);
 }
 
 /* 
