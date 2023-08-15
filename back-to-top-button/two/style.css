@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.back-to-top {
+  width: 3rem;
+  height: 3rem;
+
+  background-image: url("./top-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	cursor: pointer;
+	display: none;
+}
