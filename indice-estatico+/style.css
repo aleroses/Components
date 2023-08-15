@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+}
+
+.index {
+  width: 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #f1f1f1;
+}
+
+.index ul {
+  list-style: none;
+  padding: 0;
+}
+
+.index li {
+  margin: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.index li.active {
+	background-color: darkslateblue;
+	padding-left: 1rem;
+}
+
+.content {
+  width: 80%;
+  margin-left: 20%;
+  padding: 20px;
+}
+
+.content section {
+  margin-bottom: 40px;
+}
+
+.content section h2 {
+  margin-bottom: 10px;
+}
