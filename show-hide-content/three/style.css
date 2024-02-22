@@ -1,0 +1,26 @@
+#toggle {
+  display: none;
+}
+
+.mostrar-btn {
+  cursor: pointer;
+}
+
+.contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+#toggle:checked ~ .contenido {
+  max-height: 100px; /* Ajusta la altura máxima al contenido que desees mostrar */
+  transition: max-height 0.5s ease-in;
+}
+
+.ocultar-btn {
+  display: none;
+}
+
+#toggle:checked ~ .ocultar-btn {
+  display: block;
+}
