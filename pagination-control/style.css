@@ -1,0 +1,36 @@
+#pagination {
+  display: flex;
+  align-items: center;
+}
+
+#pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+#pagination button:focus {
+  outline: none;
+}
+
+#pageNumbers {
+  display: flex;
+}
+
+.pageNumber {
+  padding: 5px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.pageNumber.active {
+  background-color: #ccc;
+}
+
+#colorBox {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: 1px solid #000;
+}
