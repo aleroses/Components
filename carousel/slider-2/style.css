@@ -1,0 +1,17 @@
+.slider {
+  position: relative;
+  /* width: 100vw; */
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
