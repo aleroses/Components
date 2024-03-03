@@ -1,4 +1,4 @@
-let currentIndex = 0;
+/* let currentIndex = 0;
 const items = document.querySelectorAll(".itemCarrousel");
 
 function prevItem() {
@@ -19,3 +19,4 @@ function updateCarrousel() {
     currentIndex * itemWidth
   }px)`;
 }
+ */

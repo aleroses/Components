@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+.slider {
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-container {
+  aspect-ratio: 16/9;
+  /* transition: transform 0.9s ease; */
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.btn-prev,
+.btn-next {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
