@@ -1,7 +1,29 @@
+body {
+  color: aquamarine;
+  background-color: #000;
+}
+
 .hide-btn {
   display: none;
 }
 
 .disabled {
-	display: none;
+  display: none;
 }
+
+/* .hide-btn {
+  display: none;
+}
+
+.disabled {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease-in-out;
+}
+
+.enabled {
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.3s ease, max-height 0.3s ease-in-out;
+} */
