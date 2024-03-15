@@ -1,0 +1,58 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+select,
+input[type="number"] {
+  margin-right: 10px;
+}
+
+#movies-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.movie-image img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.movie-release-date {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #888;
+}
+
+.movie-overview {
+  margin-top: 10px;
+}

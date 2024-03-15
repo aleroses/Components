@@ -1,4 +1,5 @@
 let btn = document.querySelector(".back-to-top");
+
 btn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
