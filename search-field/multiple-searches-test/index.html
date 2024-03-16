@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Popular movies</h1>
+
+    <div class="filters">
+      <!-- <label for="genre">Genre:</label> -->
+      <select name="" class="genre" id="genre">
+        <option value="">All</option>
+        <option value="28">Action</option>
+        <option value="12">Adventure</option>
+        <option value="16">Animation</option>
+        <option value="35">Comedy</option>
+        <option value="80">Crime</option>
+        <option value="99">Documentary</option>
+      </select>
+
+      <!-- <label for="year">Year</label> -->
+      <input
+        type="number"
+        class="year"
+        id="year"
+        min="1900"
+        max="2024"
+        placeholder="year"
+      />
+
+      <!-- <label for="rating">Rating</label> -->
+      <input
+        type="number"
+        class="rating"
+        id="rating"
+        min="1"
+        max="10"
+        step="1"
+        placeholder="Rating"
+      />
+
+      <!-- <label for="sort">Sort</label> -->
+      <select name="" class="sort" id="sort">
+        <option value="popularity.desc">Most Recent</option>
+        <option value="popularity.asc">Oldest</option>
+      </select>
+
+      <button class="search-btn" id="search-btn">Search</button>
+    </div>
+
+    <div class="movies-container"></div>
+    <script src="./main.mjs" type="module"></script>
+  </body>
+</html>
