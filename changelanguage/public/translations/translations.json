@@ -1,0 +1,17 @@
+{
+  "es": {
+    "welcome": "Bienvenido",
+    "about": "Sobre nosotros",
+    "contact": "Contacto"
+  },
+  "en": {
+    "welcome": "Welcome",
+    "about": "About us",
+    "contact": "Contact"
+  },
+  "fr": {
+    "welcome": "Bienvenue",
+    "about": "À propos de nous",
+    "contact": "Contact"
+  }
+}
