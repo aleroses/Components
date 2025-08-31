@@ -1,0 +1,117 @@
+/* Page Style */
+body {
+  box-sizing: border-box;
+  min-block-size: 100vb;
+  padding: 2rem;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: hsl(261deg 100% 25%);
+  background: linear-gradient(
+    120deg,
+    hsl(260deg 80% 50%),
+    hsl(0deg 100% 50%)
+  );
+}
+
+a {
+  color: hsl(1deg 70% 50%);
+}
+
+h1 {
+  max-inline-size: 40rem;
+  margin-block: 2rem;
+  margin-inline: auto;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: hsl(0deg 100% 95%);
+  text-align: center;
+  text-wrap: balance;
+}
+
+code {
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  font-size: 0.8em;
+  color: hsl(0deg 100% 15%);
+  white-space: nowrap;
+  background: yellow;
+  border-radius: 5px;
+}
+
+p {
+  margin-block: 0.5rem;
+}
+
+p:last-child {
+  margin-block-end: 0;
+}
+
+.note {
+  max-inline-size: 40rem;
+  margin-inline: auto;
+  margin-block: 2rem 3rem;
+  color: hsl(0 100% 85%);
+  text-align: center;
+  text-wrap: balance;
+}
+
+details {
+  position: relative;
+  max-inline-size: 40rem;
+  padding: 1rem;
+  margin-block: 1rem 0;
+  margin-inline: auto;
+  background-image: linear-gradient(
+    to top left,
+    hsl(260deg 80% 80%) 0,
+    hsl(0deg 100% 95%)
+  );
+  border: 1px solid hsl(260deg 100% 95%);
+  border-radius: 0.3rem;
+}
+
+summary {
+  padding-inline: 2rem;
+  position: relative;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Demo Code */
+.details::details-content {
+  display: block;
+  margin-inline: 2rem;
+  block-size: 0;
+  overflow: hidden;
+  transition-property: block-size, content-visibility;
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.details[open]::details-content {
+  /* Fallback for browsers that don't support calc-size() function */
+  block-size: auto;
+
+  /* calc-size() function allows transition to height: auto; */
+  block-size: calc-size(auto);
+}
+
+/* List Item ::marker supports only some CSS properties, so we're using ::before pseudo-element instead */
+summary::marker {
+  content: "»";
+  content: none;
+}
+
+summary::before {
+  content: "»";
+  position: absolute;
+  inset-inline-start: 1rem;
+  inset-block-start: -0.05rem;
+  transition: rotate 0.2s;
+}
+
+.details[open] summary::before {
+  rotate: 90deg;
+  inset-block-start: 0.05rem;
+}

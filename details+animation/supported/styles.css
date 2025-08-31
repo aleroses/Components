@@ -1,0 +1,78 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* The key is to start <details> element in the "open" state...
+  ...and animate its max-height value by toggling a checkbox. */
+details {
+  max-width: 500px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  background: white;
+  transition: max-height 400ms ease-out;
+
+  max-height: 4rem; /* Set a max-height value just enough to show the summary content */
+  overflow: hidden; /* Hide the rest of the content */
+}
+
+summary {
+  display: block; /* This hides the summary's ::marker pseudo-element */
+}
+
+input {
+  display: none; /* Hide the checkbox element */
+}
+
+/* <label> element to check the checkbox */
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  background: #444;
+  color: #fff;
+  height: 4rem; /* This height value must be equal to max-height value of <details> element  */
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+label::before {
+  content: "⏵";
+  font-size: 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  transition: rotate 200ms 400ms ease-out;
+}
+
+div.content {
+  padding: 0 10px;
+  border: 2px solid #888;
+}
+
+/* Here you can choose two approaches to animate <details> element:
+  1) Use adjacent sibling combinator (+)
+  2) Use :has() pseudo-class, but this might not work in Firefox.
+*/
+
+input:checked + details,
+details:has(input:checked) {
+  max-height: 800px; /* Set a max-height value enough to show all the content */
+}
+
+input:checked + details label::before,
+details:has(input:checked) label::before {
+  rotate: 90deg;
+  transition: rotate 200ms ease-out;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+/* https://dev.to/jgustavoas/how-to-fully-animate-the-details-html-element-with-only-css-no-javascript-2n88 */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <input type="checkbox" name="detail-one" id="detail-one" />
+    <details open>
+      <summary>
+        <label for="detail-one"
+          >Click to open and close smoothly with pure CSS</label
+        >
+      </summary>
+      <div class="content">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+          unde, ex rem voluptates autem aliquid veniam quis temporibus
+          repudiandae illo, nostrum, pariatur quae! At animi modi
+          dignissimos corrupti placeat voluptatum!
+        </p>
+        <img
+          src="https://media.tenor.com/L8wJy79nmH8AAAAC/baby-yoda-wee.gif"
+          width="400px"
+          alt=""
+        />
+        <p>
+          Facilis ducimus iure officia quos possimus quaerat iusto,
+          quas, laboriosam sapiente autem ab assumenda eligendi
+          voluptatum nisi eius cumque, tempore reprehenderit optio
+          placeat praesentium non sint repellendus consequuntur? Nihil,
+          soluta.
+        </p>
+      </div>
+    </details>
+
+    <input type="checkbox" name="detail-two" id="detail-two" />
+    <details open>
+      <summary>
+        <label for="detail-two"
+          >This one also uses adjacent sibling combinator (+)
+          approach</label
+        >
+      </summary>
+      <div class="content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <img
+          src="https://i.kym-cdn.com/entries/icons/mobile/000/012/982/039.jpg"
+          width="400px"
+          alt=""
+        />
+        <p>
+          Facilis ducimus iure officia quos possimus quaerat iusto,
+          quas, laboriosam sapiente autem ab assumenda eligendi
+          voluptatum nisi eius cumque, tempore reprehenderit optio
+          placeat praesentium non sint repellendus consequuntur? Nihil,
+          soluta.
+        </p>
+      </div>
+    </details>
+
+    <!-- This one is animated using :has() pseudo-class approach, but it might not work in Firefox  -->
+    <details open>
+      <summary>
+        <input type="checkbox" name="detail-three" id="detail-three" />
+        <label for="detail-three">
+          <span>This one uses <b>:has</b> pseudo-class approach</span>
+        </label>
+      </summary>
+      <div class="content">
+        <p>
+          <strong>
+            :has() pseudo-class works in Firefox only if the user
+            explicitly enable it behind the
+            <a
+              target="_blank"
+              href="https://caniuse.com/css-has"
+              title="Can I use :has()"
+            >
+              layout.css.has-selector.enabled
+            </a>
+            flag! 😒
+          </strong>
+        </p>
+
+        <p>
+          <a
+            title="Browser compatibility"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has#browser_compatibility"
+            >:has() pseudo-class browser compatibility</a
+          >
+        </p>
+        <img
+          src="https://www.memesmonkey.com/images/memesmonkey/77/77c7613c05100523917cfdfd7daf39ba.jpeg"
+          width="400px"
+          alt=""
+        />
+      </div>
+    </details>
+
+    <footer>
+      <b>Update on June 2023:</b><br /><br /><a
+        href="https://codepen.io/jgustavoas/pen/rNQyxWa?editors=1100"
+        target="_blank"
+        >Click here</a
+      >
+      to check the updated version that works in Safari and in Firefox
+      on macOS.<br /><br />And
+      <a
+        href="https://dev.to/jgustavoas/solved-how-to-fully-animate-the-details-html-element-with-only-css-and-no-javascript-55ek"
+        target="_blank"
+        >click here</a
+      >
+      to read about that version.
+    </footer>
+  </body>
+</html>

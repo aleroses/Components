@@ -1,0 +1,20 @@
+.container {
+  position: relative;
+  max-height: 400px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.content {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
