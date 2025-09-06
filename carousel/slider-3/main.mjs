@@ -1,14 +1,19 @@
 function startSlider() {
   const slider = document.querySelector(".slider");
-  const sliderImages = document.querySelectorAll(".slider img");
+  const sliderImages =
+    document.querySelectorAll(".slider img");
 
   const imageWidth = sliderImages[0].clientWidth;
+
+  console.log(imageWidth);
 
   let counter = 1;
 
   setInterval(() => {
     /* console.log(-imageWidth * counter); */
-    slider.style.transform = `translateX(${-imageWidth * counter}px)`;
+    slider.style.transform = `translateX(${
+      -imageWidth * counter
+    }px)`;
     slider.style.transition = "transform 0.5s ease";
 
     counter++;
