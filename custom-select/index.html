@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button id="difficultyBtn" class="difficulty easy">
+      🟢 Easy
+    </button>
+
+    <script>
+      const difficulties = [
+        { value: 'easy', label: '🟢 Easy' },
+        { value: 'medium', label: '🟡 Medium' },
+        { value: 'hard', label: '🔴 Hard' },
+      ];
+
+      let index = 0;
+      const btn = document.getElementById('difficultyBtn');
+
+      btn.addEventListener('click', () => {
+        index = (index + 1) % difficulties.length;
+
+        const current = difficulties[index];
+        btn.textContent = current.label;
+        btn.className = `difficulty ${current.value}`;
+
+        console.log('Dificultad actual:', current.value);
+      });
+    </script>
+  </body>
+</html>

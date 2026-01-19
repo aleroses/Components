@@ -1,0 +1,31 @@
+.difficulty {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-width: 140px;
+}
+
+/* Estados */
+.difficulty.easy {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #000;
+}
+
+.difficulty.medium {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #000;
+}
+
+.difficulty.hard {
+  background: linear-gradient(135deg, #f87171, #dc2626);
+  color: #fff;
+}
+
+/* Pequeño feedback al tap */
+.difficulty:active {
+  transform: scale(0.96);
+}
