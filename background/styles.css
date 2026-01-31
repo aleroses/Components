@@ -154,6 +154,10 @@ body {
     transform 0.3s ease;
 }
 
+.avatar-wrapper:hover {
+  animation-play-state: paused;
+}
+
 .avatar {
   width: 96%;
   height: 96%;
@@ -161,10 +165,17 @@ body {
   border-radius: 50%;
   position: relative;
   z-index: 2;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+
+  will-change: transform;
 }
 
 .avatar:hover {
   transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(0, 229, 204, 0.6));
   /* animation: none; */
 }
 
