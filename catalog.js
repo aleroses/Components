@@ -12,11 +12,15 @@ const groupsNav = document.querySelector("#groups");
 const count = document.querySelector("#count");
 const preview = document.querySelector("#preview");
 const previewEmpty = document.querySelector("#preview-empty");
-const previewFicha = document.querySelector("#preview-ficha");
+const previewPanel = document.querySelector("#preview-panel");
 const previewTitle = document.querySelector("#preview-title");
 const previewMeta = document.querySelector("#preview-meta");
 const previewOpen = document.querySelector("#preview-open");
+const previewClose = document.querySelector("#preview-close");
+const previewBackdrop = document.querySelector("#preview-backdrop");
 const previewFrame = document.querySelector("#preview-frame");
+const mobileQuery = window.matchMedia("(max-width: 800px)");
+let currentItem = null;
 const themeButton = document.querySelector("#theme");
 
 function applyTheme(theme) {
@@ -38,6 +42,44 @@ themeButton.addEventListener("click", () => {
 });
 
 applyTheme(document.documentElement.dataset.theme || "light");
+
+function openModal() {
+  preview.classList.add("is-modal");
+  previewBackdrop.hidden = false;
+  document.body.classList.add("preview-open");
+}
+
+function closeModal() {
+  preview.classList.remove("is-modal");
+  previewBackdrop.hidden = true;
+  document.body.classList.remove("preview-open");
+  if (!mobileQuery.matches || !currentItem) return;
+  previewFrame.src = "about:blank";
+  history.replaceState(null, "", location.pathname + location.search);
+}
+
+previewClose.addEventListener("click", closeModal);
+previewBackdrop.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && preview.classList.contains("is-modal")) {
+    closeModal();
+  }
+});
+
+mobileQuery.addEventListener("change", () => {
+  if (!currentItem) return;
+  if (mobileQuery.matches) {
+    closeModal();
+    return;
+  }
+  preview.classList.remove("is-modal");
+  previewBackdrop.hidden = true;
+  document.body.classList.remove("preview-open");
+  previewFrame.src = `./${currentItem.path}`;
+  previewEmpty.hidden = true;
+  previewPanel.hidden = false;
+});
 
 function slug(group) {
   return group
@@ -103,19 +145,17 @@ function select(item) {
   button?.classList.add("is-selected");
   button?.setAttribute("aria-pressed", "true");
 
+  currentItem = item;
   previewTitle.textContent = item.title;
   previewMeta.textContent = `${item.group} · ${item.path}`;
   previewOpen.href = `./${item.path}`;
   previewFrame.src = `./${item.path}`;
   previewFrame.title = item.title;
   previewEmpty.hidden = true;
-  previewFicha.hidden = false;
-  previewFrame.hidden = false;
+  previewPanel.hidden = false;
+  if (mobileQuery.matches) openModal();
+  else closeModal();
   history.replaceState(null, "", `#${encodeURIComponent(item.path)}`);
-
-  if (window.matchMedia("(max-width: 800px)").matches) {
-    preview.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 }
 
 function render(items) {

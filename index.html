@@ -37,24 +37,37 @@
     <nav id="groups" class="groups" aria-label="Grupos"></nav>
     <div class="workspace">
       <main id="catalog"></main>
-      <aside id="preview" class="preview">
+      <aside id="preview" class="preview" aria-labelledby="preview-title">
         <p id="preview-empty" class="preview-empty">
           Elige una demo para verla aquí.
         </p>
-        <div id="preview-ficha" class="ficha" hidden>
-          <div>
-            <h2 id="preview-title"></h2>
-            <p id="preview-meta"></p>
+        <div id="preview-panel" hidden>
+          <div class="ficha">
+            <div>
+              <h2 id="preview-title"></h2>
+              <p id="preview-meta"></p>
+            </div>
+            <div class="ficha-actions">
+              <a id="preview-open">Abrir en su página</a>
+              <button
+                type="button"
+                id="preview-close"
+                class="preview-close"
+                aria-label="Cerrar"
+              ></button>
+            </div>
           </div>
-          <a id="preview-open">Abrir en su página</a>
+          <iframe id="preview-frame" title="Vista previa de la demo"></iframe>
         </div>
-        <iframe
-          id="preview-frame"
-          title="Vista previa de la demo"
-          hidden
-        ></iframe>
       </aside>
     </div>
+    <button
+      type="button"
+      id="preview-backdrop"
+      class="preview-backdrop"
+      hidden
+      aria-label="Cerrar"
+    ></button>
     <script src="./catalog.js" type="module"></script>
   </body>
 </html>
