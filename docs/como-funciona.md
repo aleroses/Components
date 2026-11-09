@@ -74,6 +74,22 @@ Cada experimento es una carpeta con su `index.html`. El catálogo no las reescri
 
 Algunos buscadores llaman a TMDB con una clave que ya está en esos archivos. El catálogo los lista igual. No añade un backend para esconder esa clave.
 
+## Cómo se añade una demo
+
+No hay un script que recorra las carpetas. Una carpeta nueva no aparece sola. Hay que escribir una entrada a mano en `catalog.json`:
+
+```json
+{
+  "path": "mi-demo/index.html",
+  "title": "Mi demo",
+  "group": "Contenido"
+}
+```
+
+`path` es la ruta desde la raíz del repo, sin `./` al principio. `title` es el texto de la tarjeta. No se lee del `<title>` del HTML de la demo. `group` tiene que coincidir, acentos incluidos, con uno de los nombres de `groupOrder` en `catalog.js`: Navegación, Contenido, Carruseles, Efectos, Interacción o Apps. Ese arreglo fija el orden de las secciones. Un nombre que no esté en la lista igual se muestra, al final, en el orden en que aparece en el JSON.
+
+La demo en sí es la carpeta con su `index.html`. El catálogo solo necesita esa entrada para enlazarla.
+
 ## Las dos apps de React
 
 `square` y `changelanguage` no se sirven desde su `index.html` de desarrollo. Ese archivo apunta a `/src/main.jsx`, y esa ruta no existe en Pages. El catálogo apunta a lo ya construido:
@@ -90,6 +106,8 @@ npm ci && npm run build
 Sin ese build, esas dos tarjetas quedan vacías en tu máquina. En GitHub Pages no hace falta subirlo: la Action lo genera en cada publicación.
 
 Las dos usan Vite con `base: './'` en su `vite.config.js`. Las rutas de JS y CSS del build son relativas. Funcionan en http://127.0.0.1:8765/square/dist/ y también en https://aleroses.github.io/Components/square/dist/. Una base absoluta tipo `/` buscaría los archivos en la raíz del dominio (`aleroses.github.io`), no dentro de `/Components/`, y el build se vería en blanco.
+
+Si `npm ci` o `npm run build` fallan en `square` o en `changelanguage`, el job `build` queda en rojo y se detiene. `deploy` no arranca. Ese push no publica nada: ni las apps, ni el índice, ni el resto de las demos. La web sigue mostrando el último deploy que sí terminó en verde.
 
 ## Qué es `.nojekyll`
 
