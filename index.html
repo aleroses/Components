@@ -15,7 +15,26 @@
       <p class="count" id="count"></p>
     </header>
     <nav id="groups" class="groups" aria-label="Grupos"></nav>
-    <main id="catalog"></main>
+    <div class="workspace">
+      <main id="catalog"></main>
+      <aside id="preview" class="preview">
+        <p id="preview-empty" class="preview-empty">
+          Elige una demo para verla aquí.
+        </p>
+        <div id="preview-ficha" class="ficha" hidden>
+          <div>
+            <h2 id="preview-title"></h2>
+            <p id="preview-meta"></p>
+          </div>
+          <a id="preview-open">Abrir en su página</a>
+        </div>
+        <iframe
+          id="preview-frame"
+          title="Vista previa de la demo"
+          hidden
+        ></iframe>
+      </aside>
+    </div>
     <script src="./catalog.js" type="module"></script>
   </body>
 </html>

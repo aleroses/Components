@@ -10,6 +10,13 @@ const groupOrder = [
 const catalog = document.querySelector("#catalog");
 const groupsNav = document.querySelector("#groups");
 const count = document.querySelector("#count");
+const preview = document.querySelector("#preview");
+const previewEmpty = document.querySelector("#preview-empty");
+const previewFicha = document.querySelector("#preview-ficha");
+const previewTitle = document.querySelector("#preview-title");
+const previewMeta = document.querySelector("#preview-meta");
+const previewOpen = document.querySelector("#preview-open");
+const previewFrame = document.querySelector("#preview-frame");
 
 function slug(group) {
   return group
@@ -34,28 +41,67 @@ function orderedGroups(items) {
 }
 
 function card(item) {
-  const link = document.createElement("a");
-  link.className = "card";
-  link.href = `./${item.path}`;
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "card";
+  button.dataset.path = item.path;
+  button.addEventListener("click", () => select(item));
 
   const title = document.createElement("span");
   title.className = "card-title";
   title.textContent = item.title;
-  link.append(title);
+  button.append(title);
 
   if (item.group === "Apps") {
     const badge = document.createElement("span");
     badge.className = "badge";
     badge.textContent = "Necesita build";
-    link.append(badge);
+    button.append(badge);
   }
 
   const path = document.createElement("span");
   path.className = "card-path";
   path.textContent = item.path;
-  link.append(path);
+  button.append(path);
 
-  return link;
+  return button;
+}
+
+function pathFromHash() {
+  const raw = location.hash.slice(1);
+  if (!raw) return "";
+  try {
+    return decodeURIComponent(raw);
+  } catch {
+    return "";
+  }
+}
+
+function select(item) {
+  for (const selected of catalog.querySelectorAll(".card.is-selected")) {
+    selected.classList.remove("is-selected");
+    selected.removeAttribute("aria-pressed");
+  }
+
+  const button = catalog.querySelector(
+    `.card[data-path="${CSS.escape(item.path)}"]`
+  );
+  button?.classList.add("is-selected");
+  button?.setAttribute("aria-pressed", "true");
+
+  previewTitle.textContent = item.title;
+  previewMeta.textContent = `${item.group} · ${item.path}`;
+  previewOpen.href = `./${item.path}`;
+  previewFrame.src = `./${item.path}`;
+  previewFrame.title = item.title;
+  previewEmpty.hidden = true;
+  previewFicha.hidden = false;
+  previewFrame.hidden = false;
+  history.replaceState(null, "", `#${encodeURIComponent(item.path)}`);
+
+  if (window.matchMedia("(max-width: 800px)").matches) {
+    preview.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 function render(items) {
@@ -68,6 +114,10 @@ function render(items) {
     const jump = document.createElement("a");
     jump.href = `#${id}`;
     jump.textContent = group;
+    jump.addEventListener("click", (event) => {
+      event.preventDefault();
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
     groupsNav.append(jump);
 
     const section = document.createElement("section");
@@ -86,6 +136,9 @@ function render(items) {
     section.append(heading, cards);
     catalog.append(section);
   }
+
+  const current = items.find((item) => item.path === pathFromHash());
+  if (current) select(current);
 }
 
 function showMessage(text) {
