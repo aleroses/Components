@@ -45,6 +45,7 @@ jobs:
             --exclude _site \
             --exclude .git \
             --exclude node_modules \
+            --exclude docs/ \
             ./ _site/
 
       - name: Upload Pages artifact

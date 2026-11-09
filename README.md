@@ -2,6 +2,8 @@
 
 Small HTML, CSS, and JavaScript experiments, plus two React apps (`square` and `changelanguage`). The index at the repository root lists them and previews a demo beside its card.
 
+How the catalog, `.nojekyll`, and the Pages workflow fit together is explained in [docs/como-funciona.md](docs/como-funciona.md) (Spanish). That file stays in the repository and is not published with the site.
+
 ## Preview locally
 
 Open the site with a static server from the repository root. Opening `index.html` as a file leaves the catalog empty, because the page loads `catalog.json` with `fetch`.
