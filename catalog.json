@@ -1,0 +1,227 @@
+[
+  {
+    "path": "back-to-top-button/one/index.html",
+    "title": "Back to Top Button",
+    "group": "Navegación"
+  },
+  {
+    "path": "back-to-top-button/two/index.html",
+    "title": "Back to Top",
+    "group": "Navegación"
+  },
+  {
+    "path": "header/header-one/index.html",
+    "title": "Header One",
+    "group": "Navegación"
+  },
+  {
+    "path": "header/header-two/index.html",
+    "title": "Footer two",
+    "group": "Navegación"
+  },
+  {
+    "path": "header/polygon/index.html",
+    "title": "Diagonal",
+    "group": "Navegación"
+  },
+  {
+    "path": "navigation-effect/index.html",
+    "title": "Navigation effect",
+    "group": "Navegación"
+  },
+  {
+    "path": "z-header-top/index.html",
+    "title": "Z-header top",
+    "group": "Navegación"
+  },
+  {
+    "path": "accordion/index.html",
+    "title": "Acordeón Desplegable - Html y Css",
+    "group": "Contenido"
+  },
+  {
+    "path": "details+animation/supported/index.html",
+    "title": "Details animation, supported",
+    "group": "Contenido"
+  },
+  {
+    "path": "details+animation/unsupported/index.html",
+    "title": "Details animation, unsupported",
+    "group": "Contenido"
+  },
+  {
+    "path": "indice-estatico+/index.html",
+    "title": "Indice estatico",
+    "group": "Contenido"
+  },
+  {
+    "path": "insert-HTML-inside-another-HTML/index.html",
+    "title": "Insert HTML inside another HTML",
+    "group": "Contenido"
+  },
+  {
+    "path": "show-hide-content/four+transition/index.html",
+    "title": "Show and hide, transition",
+    "group": "Contenido"
+  },
+  {
+    "path": "show-hide-content/one/index.html",
+    "title": "Show and hide, one",
+    "group": "Contenido"
+  },
+  {
+    "path": "show-hide-content/three/index.html",
+    "title": "Show and hide, three",
+    "group": "Contenido"
+  },
+  {
+    "path": "show-hide-content/two/index.html",
+    "title": "Show and hide, two",
+    "group": "Contenido"
+  },
+  {
+    "path": "carousel/basis/index.html",
+    "title": "Carousel basis",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/slider-1/index.html",
+    "title": "Slider 1",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/slider-2/index.html",
+    "title": "Slider 2",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/slider-3/index.html",
+    "title": "Slider 3",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/slider-4++/index.html",
+    "title": "Slider 4",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/slider5/index.html",
+    "title": "Slider 5",
+    "group": "Carruseles"
+  },
+  {
+    "path": "carousel/swipe/index.html",
+    "title": "Carousel swipe",
+    "group": "Carruseles"
+  },
+  {
+    "path": "background/index.html",
+    "title": "Background",
+    "group": "Efectos"
+  },
+  {
+    "path": "glass-effect/index.html",
+    "title": "Glass Effect",
+    "group": "Efectos"
+  },
+  {
+    "path": "order+flex/index.html",
+    "title": "Order and flex",
+    "group": "Efectos"
+  },
+  {
+    "path": "scroll-bar-styles/index.html",
+    "title": "Scroll bar styles",
+    "group": "Efectos"
+  },
+  {
+    "path": "shadow-over-cursor/with-css+/index.html",
+    "title": "Shadow over cursor, CSS",
+    "group": "Efectos"
+  },
+  {
+    "path": "shadow-over-cursor/with-js+/index.html",
+    "title": "Shadow over cursor, JS",
+    "group": "Efectos"
+  },
+  {
+    "path": "custom-select/index.html",
+    "title": "Custom select",
+    "group": "Interacción"
+  },
+  {
+    "path": "dark-mode/button/one-button/index.html",
+    "title": "One Button",
+    "group": "Interacción"
+  },
+  {
+    "path": "dark-mode/button/two-button/index.html",
+    "title": "Two Button",
+    "group": "Interacción"
+  },
+  {
+    "path": "dark-mode/dark-mode-one+css/index.html",
+    "title": "Dark mode, CSS",
+    "group": "Interacción"
+  },
+  {
+    "path": "dark-mode/dark-mode-two+js/con-varios-styles/index.html",
+    "title": "Dark mode, several styles",
+    "group": "Interacción"
+  },
+  {
+    "path": "dark-mode/dark-mode-two+js/sin-tantos-styles/index.html",
+    "title": "Dark mode, few styles",
+    "group": "Interacción"
+  },
+  {
+    "path": "generator/index.html",
+    "title": "Generators",
+    "group": "Interacción"
+  },
+  {
+    "path": "generator/test/index.html",
+    "title": "Generators, test",
+    "group": "Interacción"
+  },
+  {
+    "path": "intersection-observer/index.html",
+    "title": "Intersection Observer",
+    "group": "Interacción"
+  },
+  {
+    "path": "pagination-control/index.html",
+    "title": "Pagination",
+    "group": "Interacción"
+  },
+  {
+    "path": "pagination-control/test/index.html",
+    "title": "Test: Pagination",
+    "group": "Interacción"
+  },
+  {
+    "path": "search-field/multiple-searches-test/index.html",
+    "title": "Multiple searches, test",
+    "group": "Interacción"
+  },
+  {
+    "path": "search-field/multiple-searches/index.html",
+    "title": "Multiple searches",
+    "group": "Interacción"
+  },
+  {
+    "path": "search-field/search-field/index.html",
+    "title": "Search movies",
+    "group": "Interacción"
+  },
+  {
+    "path": "changelanguage/index.html",
+    "title": "Change language",
+    "group": "Apps"
+  },
+  {
+    "path": "square/index.html",
+    "title": "square",
+    "group": "Apps"
+  }
+]
