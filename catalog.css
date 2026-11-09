@@ -261,6 +261,43 @@ h1 {
   max-width: 38rem;
 }
 
+.to-top {
+  position: fixed;
+  z-index: 10;
+  right: 1rem;
+  bottom: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+.to-top::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f3ec;
+  mask: url("./up.svg") center / 16px 16px no-repeat;
+  -webkit-mask: url("./up.svg") center / 16px 16px no-repeat;
+}
+
+:root[data-theme="dark"] .to-top::before {
+  background-color: #14241f;
+}
+
+.to-top:hover {
+  filter: brightness(1.12);
+}
+
+.to-top[hidden],
+body.preview-open .to-top {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .workspace {
     grid-template-columns: 1fr;

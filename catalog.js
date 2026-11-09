@@ -22,6 +22,7 @@ const previewFrame = document.querySelector("#preview-frame");
 const mobileQuery = window.matchMedia("(max-width: 800px)");
 let currentItem = null;
 const themeButton = document.querySelector("#theme");
+const toTop = document.querySelector("#to-top");
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
@@ -60,6 +61,18 @@ function closeModal() {
 
 previewClose.addEventListener("click", closeModal);
 previewBackdrop.addEventListener("click", closeModal);
+
+function syncToTop() {
+  toTop.hidden = window.scrollY < 480;
+}
+
+toTop.addEventListener("click", () => {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+});
+
+window.addEventListener("scroll", syncToTop, { passive: true });
+syncToTop();
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && preview.classList.contains("is-modal")) {
