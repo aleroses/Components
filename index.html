@@ -6,6 +6,22 @@
     <title>Components</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./catalog.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("catalog-theme");
+          var theme =
+            saved === "light" || saved === "dark"
+              ? saved
+              : matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.dataset.theme = theme;
+        } catch (error) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="top">
@@ -13,7 +29,10 @@
         <p class="eyebrow">Demos</p>
         <h1>Components</h1>
       </div>
-      <p class="count" id="count"></p>
+      <div class="top-meta">
+        <p class="count" id="count"></p>
+        <button type="button" id="theme" class="theme">Modo oscuro</button>
+      </div>
     </header>
     <nav id="groups" class="groups" aria-label="Grupos"></nav>
     <div class="workspace">

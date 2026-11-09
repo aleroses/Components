@@ -17,6 +17,27 @@ const previewTitle = document.querySelector("#preview-title");
 const previewMeta = document.querySelector("#preview-meta");
 const previewOpen = document.querySelector("#preview-open");
 const previewFrame = document.querySelector("#preview-frame");
+const themeButton = document.querySelector("#theme");
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  const dark = theme === "dark";
+  themeButton.textContent = dark ? "Modo claro" : "Modo oscuro";
+  themeButton.setAttribute("aria-pressed", String(dark));
+}
+
+themeButton.addEventListener("click", () => {
+  const next =
+    document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  try {
+    localStorage.setItem("catalog-theme", next);
+  } catch (error) {
+    // The theme still changes for this visit when storage is blocked.
+  }
+  applyTheme(next);
+});
+
+applyTheme(document.documentElement.dataset.theme || "light");
 
 function slug(group) {
   return group

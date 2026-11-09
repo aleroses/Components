@@ -9,6 +9,16 @@
   font-family: "Segoe UI", "Avenir Next", "Helvetica Neue", sans-serif;
 }
 
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #f3efe6;
+  --muted: #b7b0a4;
+  --line: #3a342c;
+  --paper: #161411;
+  --card: #221f1b;
+  --accent: #3dba9a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -55,8 +65,29 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+.top-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .count {
   color: var(--muted);
+}
+
+.theme {
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.theme:hover {
+  border-color: var(--accent);
 }
 
 .groups {
