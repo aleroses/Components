@@ -52,13 +52,6 @@ function card(item) {
   title.textContent = item.title;
   button.append(title);
 
-  if (item.group === "Apps") {
-    const badge = document.createElement("span");
-    badge.className = "badge";
-    badge.textContent = "Necesita build";
-    button.append(badge);
-  }
-
   const path = document.createElement("span");
   path.className = "card-path";
   path.textContent = item.path;

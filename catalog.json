@@ -215,12 +215,12 @@
     "group": "Interacción"
   },
   {
-    "path": "changelanguage/index.html",
+    "path": "changelanguage/dist/index.html",
     "title": "Change language",
     "group": "Apps"
   },
   {
-    "path": "square/index.html",
+    "path": "square/dist/index.html",
     "title": "square",
     "group": "Apps"
   }

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Content } from "./components/Content";
 import { LanguageProvider } from "./context/LanguageProvider";
 
-import translations from "/public/translations/translations.json";
 import { LanguageContext } from "./context/LanguageContext";
 import { About } from "./components/About";
 

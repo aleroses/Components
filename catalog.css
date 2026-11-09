@@ -6,7 +6,6 @@
   --paper: #f3efe6;
   --card: #fffcf7;
   --accent: #0f5c4c;
-  --accent-soft: #e5f2ee;
   font-family: "Segoe UI", "Avenir Next", "Helvetica Neue", sans-serif;
 }
 
@@ -187,16 +186,6 @@ h1 {
   color: var(--muted);
   font-size: 0.8rem;
   word-break: break-all;
-}
-
-.badge {
-  align-self: flex-start;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 999px;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 650;
 }
 
 .message {
